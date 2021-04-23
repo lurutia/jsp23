@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>현재시간</title>
+<title>현재시간</title>
 </head>
 <body>
-현재 시각:
+현재시각:
 <%= now %>
 </body>
 </html>
