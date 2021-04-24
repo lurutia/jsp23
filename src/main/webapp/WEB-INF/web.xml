@@ -18,6 +18,14 @@
 		<param-value>5</param-value>
 	</context-param>
 	
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>/ch07/view/*</url-pattern>
+			<include-prelude>/ch07/common/variable.jspf</include-prelude>
+			<include-coda>/ch07/common/footer.jspf</include-coda>
+		</jsp-property-group>
+	</jsp-config>
+	
 	<error-page>
 		<error-code>404</error-code>
 		<location>/error/error404.jsp</location>
