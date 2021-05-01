@@ -5,12 +5,19 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 		http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-	
+
+	<!--
 	<servlet>
 		<servlet-name>mysqlDriverLoader</servlet-name>
 		<servlet-class>ch14.jdbc.MySQLDriverLoader</servlet-class>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+	 -->
+	 <servlet>
+	 	<servlet-name>DBCPInit</servlet-name>
+	 	<servlet-class>ch14.jdbc.DBCPInit</servlet-class>
+	 	<load-on-startup>1</load-on-startup>
+	 </servlet>
 	
 	<context-param>
 		<description>로깅 여부</description>
