@@ -14,6 +14,34 @@
 	</servlet>
 	 -->
 	 <servlet>
+	 	<servlet-name>ControllerUsingFile</servlet-name>
+	 	<servlet-class>ch18.ControllerUsingFile</servlet-class>
+	 	<init-param>
+	 		<param-name>configFile</param-name>
+	 		<param-value>/WEB-INF/commandHandler.properties</param-value>
+	 	</init-param>
+	 	<load-on-startup>1</load-on-startup>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>ControllerUsingFile</servlet-name>
+	 	<url-pattern>/ch18/controllerUsingFile</url-pattern>
+	 </servlet-mapping>
+	 
+ 	 <servlet>
+	 	<servlet-name>ControllerUsingURI</servlet-name>
+	 	<servlet-class>ch18.ControllerUsingURI</servlet-class>
+	 	<init-param>
+	 		<param-name>configFile</param-name>
+	 		<param-value>/WEB-INF/commandHandler2.properties</param-value>
+	 	</init-param>
+	 	<load-on-startup>1</load-on-startup>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>ControllerUsingURI</servlet-name>
+	 	<url-pattern>*.do</url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
 	 	<servlet-name>DBCPInit</servlet-name>
 	 	<servlet-class>ch14.jdbc.DBCPInit</servlet-class>
 	 	<load-on-startup>1</load-on-startup>
@@ -26,6 +54,15 @@
 	 <servlet-mapping>
 	 	<servlet-name>now</servlet-name>
 	 	<url-pattern>/ch17/now</url-pattern>
+	 </servlet-mapping>
+	 
+	 <servlet>
+	 	<servlet-name>SimpleController</servlet-name>
+	 	<servlet-class>ch18.SimpleController</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>SimpleController</servlet-name>
+	 	<url-pattern>/ch18/simple</url-pattern>
 	 </servlet-mapping>
 	
 	<context-param>
