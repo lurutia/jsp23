@@ -18,6 +18,15 @@
 	 	<servlet-class>ch14.jdbc.DBCPInit</servlet-class>
 	 	<load-on-startup>1</load-on-startup>
 	 </servlet>
+	 
+	 <servlet>
+	 	<servlet-name>now</servlet-name>
+	 	<servlet-class>ch17.NowServlet</servlet-class>
+	 </servlet>
+	 <servlet-mapping>
+	 	<servlet-name>now</servlet-name>
+	 	<url-pattern>/ch17/now</url-pattern>
+	 </servlet-mapping>
 	
 	<context-param>
 		<description>로깅 여부</description>
