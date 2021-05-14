@@ -13,6 +13,9 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	 -->
+	 <listener>
+	 	<listener-class>ch20.DBCPInitListener</listener-class>
+	 </listener>
 	 <filter>
 	 	<filter-name>encodingFilter</filter-name>
 	 	<filter-class>ch19.CharacterEncodingFilter</filter-class>
@@ -99,6 +102,16 @@
 	 	<url-pattern>/ch18/simple</url-pattern>
 	 </servlet-mapping>
 	
+	<context-param>
+		<param-name>poolConfig</param-name>
+		<param-value>
+			jdbcdriver=com.mysql.jdbc.Driver
+			jdbcUrl=jdbc:mysql://localhost:3306/sakila?characterEncoding=utf8
+			dbUser=root
+			dbPass=12345
+			poolName=ch20
+		</param-value>
+	</context-param>
 	<context-param>
 		<description>로깅 여부</description>
 		<param-name>logEnabled</param-name>

@@ -20,7 +20,6 @@ public class ControllerUsingFile extends HttpServlet {
 		String configFile = getInitParameter("configFile");
 		Properties properties = new Properties();
 		String configFilePath = getServletContext().getRealPath(configFile);
-		System.out.println(configFilePath);
 		try(FileReader fis = new FileReader(configFilePath)) {
 			properties.load(fis);
 		} catch (Exception e) {
